@@ -7,6 +7,7 @@ const app = express();
 
 // import routes
 const donorsRoute = require('./routes/donors');
+const requestsRoute = require('./routes/request');
 
 // middleware
 app.use(express.json());
@@ -18,6 +19,7 @@ app.use((req, res, next) => {
 
 //routes
 app.use('/api/donors', donorsRoute);
+app.use('/api/requests', requestsRoute);
 
 // connect to db
 mongoose
