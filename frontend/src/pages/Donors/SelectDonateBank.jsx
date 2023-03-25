@@ -20,13 +20,12 @@ const SelectDonateBank = () => {
             <h1 className="text-7xl text-green-600">Donate</h1>
             <h2 className="text-4xl mt-7 ml-4">Now</h2>
           </div>
-          <form className="flex flex-col gap-3 mr-20 mt-6">
+          <form className="flex flex-col gap-3 mr-20 mt-4">
             <label className="text-3xl text-gray-400">
               Select Food Bank Near You
             </label>
             <div class="form-group">
-              <label for="exampleFormControlSelect1">Example select</label>
-              <select class="form-control mt-4" id="exampleFormControlSelect1">
+              <select class="form-control mt-2" id="FoodBank">
                 <option>Colombo</option>
                 <option>Kandy</option>
                 <option>Matale</option>
@@ -48,7 +47,6 @@ const SelectDonateBank = () => {
           </form>
         </div>
 
-        {/* right side */}
       </div>
     </div>
   );
