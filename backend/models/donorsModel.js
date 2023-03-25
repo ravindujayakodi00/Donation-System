@@ -21,6 +21,17 @@ const donorSchema = new mongoose.Schema({
     address: {
         type: String,
         required: true
+    },
+    businessOrganization: {
+        name: {
+            type: String,
+        },
+        phone: {
+            type: String,
+        },
+        address: {
+            type: String,
+        }
     }
 
 },{timestamps: true});
@@ -28,4 +39,3 @@ const donorSchema = new mongoose.Schema({
 const Donor = mongoose.model('Donor', donorSchema);
 
 module.exports = Donor;
-
