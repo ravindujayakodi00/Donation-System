@@ -22,17 +22,6 @@ const donorSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    businessOrganization: {
-        name: {
-            type: String,
-        },
-        phone: {
-            type: String,
-        },
-        address: {
-            type: String,
-        }
-    }
 
 },{timestamps: true});
 
