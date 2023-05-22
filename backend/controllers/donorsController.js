@@ -21,13 +21,33 @@ getDonor = async (req, res) => {
 
 createDonor = async (req, res) => {
     try {
-        const newDonor = new Donor(req.body);
+        const { firstName, lastName, email, phone, address } = req.body;
+
+        // Validate phone number has 10 digits
+        if (phone.length !== 10) {
+            return res.status(400).json({ error: 'Phone number must have 10 digits.' });
+        }
+
+        // Validate email contains '@' symbol
+        if (!email.includes('@')) {
+            return res.status(400).json({ error: 'Invalid email format.' });
+        }
+
+        const newDonor = new Donor({
+            firstName,
+            lastName,
+            email,
+            phone,
+            address
+        });
+
         const donor = await newDonor.save();
         res.status(201).json(donor);
     } catch (err) {
         res.status(500).json(err);
     }
 }
+
 
 updateDonor = async (req, res) => {
     try {
