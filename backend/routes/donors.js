@@ -10,6 +10,10 @@ const {
     deleteDonor
 } = require('../controllers/donorsController');
 
+const requireAuth = require('../middleware/requireAuth');
+
+//requireAuth middleware will run on all routes below this line
+
 // get all donors 
 router.get('/', getAllDonors);
 
