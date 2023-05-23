@@ -1,18 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  mode: "jit",
   theme: {
     extend: {
       colors: {
-        "gray-20": "#F8F4EB",
-        "gray-50": "#EFE6E6",
-        "gray-100": "#DFCCCC",
-        "gray-500": "#5E0000",
-        "primary-100": "#FFE1E0",
-        "primary-300": "#FFA6A3",
-        "primary-500": "#FF6B66",
-        "secondary-400": "#FFCD5B",
-        "secondary-500": "#FFC132",
+        primary: "#00040f",
+        secondary: "#00f6ff",
+        dimWhite: "rgba(255, 255, 255, 0.7)",
+        dimBlue: "rgba(9, 151, 124, 0.1)",
       },
       backgroundImage: (theme) => ({
         "gradient-yellowred":
@@ -21,6 +17,7 @@ module.exports = {
       fontFamily: {
         dmsans: ["DM Sans", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
       content: {
         // evolvetext: "url('./assets/EvolveText.png')",
@@ -28,8 +25,11 @@ module.exports = {
     },
     screens: {
       xs: "480px",
+      ss: "620px",
       sm: "768px",
       md: "1060px",
+      lg: "1200px",
+      xl: "1700px",
     },
   },
   plugins: [],

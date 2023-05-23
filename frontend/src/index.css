@@ -1,7 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-h1 {
-    color: blue;
+
+.selectbank h1,h2{
+    font-family: 'Montserrat-900' sans-serif;
+}
+
+.selectbank label{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sidetext {
+    font-family: 'Montserrat', sans-serif;
+}
+
+select {
+    @apply bg-white border-2 border-gray-300 rounded-xl h-10 px-5 pr-16 text-sm focus:outline-none focus:border-green-500 !important;
+}
+
+.btn {
+    @apply rounded-full !important;
 }
